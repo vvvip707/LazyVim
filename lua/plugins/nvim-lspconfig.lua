@@ -14,6 +14,7 @@ return {
         cmake = {},
         vimls = {},
       },
+      autoformat = false,
     },
   },
 }
