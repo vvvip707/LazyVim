@@ -1,32 +1,35 @@
+local cclsoptions = {
+  init_options = {
+    index = {
+      threads = 0,
+    },
+    cache = {
+      directory = '/tmp/ccls',
+    },
+    hilight = {
+      IsRange = true,
+    }
+  }
+}
+
+local lspservers = {
+  ccls = cclsoptions,
+  pyright = {},
+  jsonls = {},
+  awk_ls = {},
+  cmake = {},
+  bashls = {},
+  vimls = {},
+}
+
+local lspoptions = {
+  servers = lspservers,
+  autoformat = false,
+}
+
 return {
   {
     "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
-        ccls = {
-          init_options = {
-            index = {
-              threads = 0,
-            },
-            cache = {
-              directory = '/tmp/ccls',
-            },
-            hilight = {
-              IsRange = true,
-            }
-          }
-        },
-        bashls = {},
-        jsonls = {},
-        awk_ls = {},
-        cmake = {},
-        vimls = {},
-      },
-      autoformat = false,
-    },
+    opts = lspoptions,
   },
 }
