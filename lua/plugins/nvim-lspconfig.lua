@@ -4,16 +4,17 @@ local cclsoptions = {
       threads = 0,
     },
     cache = {
-      directory = '/tmp/ccls',
+      directory = "/home/ydefu/tmp/ccls",
     },
     hilight = {
       IsRange = true,
-    }
-  }
+    },
+  },
 }
 
 local lspservers = {
-  ccls = cclsoptions,
+  -- ccls = cclsoptions,
+  clangd = {},
   pyright = {},
   jsonls = {},
   awk_ls = {},
