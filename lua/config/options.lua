@@ -9,5 +9,6 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.softtabstop = 4
 opt.backspace = "indent,eol,start"
+vim.g.autoformat = false -- disable global autoformat
 --opt.cursorline = true
 --opt.cursorcolumn = true
