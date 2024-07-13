@@ -18,5 +18,6 @@ return {
     cancel_color_key = "<leader>j",
     colors = array_concat(colors, extend),
     select_mode = "loop",
+    scroll_center = false,
   },
 }
